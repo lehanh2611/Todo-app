@@ -1,0 +1,11 @@
+.todoButton {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60px;
+
+  .button {
+    height: 40px;
+    background-color: var(--red);
+    width: 45%;
+  }
+}

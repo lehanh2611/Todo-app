@@ -1,0 +1,42 @@
+.todoInput {
+  --height-input-box: 38px;
+}
+
+.title {
+  font-size: 3rem;
+  text-align: center;
+  margin: 20px 0;
+  font-weight: 600;
+}
+.container {
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+.inputBox {
+  height: var(--height-input-box);
+  display: flex;
+  margin-bottom: 15px;
+
+  .input {
+    border-radius: 0 5px 5px 0;
+    height: 100%;
+    padding: 0 10px;
+    font-size: 1.8rem;
+  }
+}
+
+.iconBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px 0 0 5px;
+  height: var(--height-input-box);
+  width: var(--height-input-box);
+  background-color: var(--primary);
+
+  .icon {
+    width: 20px;
+    fill: var(--default);
+  }
+}

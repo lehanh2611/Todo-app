@@ -1,0 +1,36 @@
+:root {
+  --primary: hsl(188deg 66% 43%);
+  --text: hsl(230deg 8% 15%);
+  --default: #ffffff;
+  --border: hsl(0deg 0% 87%);
+  --green: hsl(135deg 42% 43%);
+  --red: hsl(356deg 66% 53%);
+  --orange: hsl(45deg 94% 56%);
+}
+
+html {
+  font-size: 10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: inherit;
+  font-size: inherit;
+}
+
+body {
+  font-size: 2rem;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
