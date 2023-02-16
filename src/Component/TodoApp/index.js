@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import classNames from "classnames/bind";
 
 import styles from "./.module.scss";
@@ -14,6 +14,15 @@ function TodoApp() {
   const [todoList, setTodoList] = useState([]);
   const [rule, setRule] = useState("all");
   const [search, setSearch] = useState("");
+
+  useMemo(() => {
+    const TodoAppData = localStorage.getItem("todoList");
+    if (TodoAppData) {
+      setTodoList(JSON.parse(TodoAppData));
+    }
+  }, []);
+
+  localStorage.setItem("todoList", JSON.stringify(todoList));
 
   return (
     <div className={cx("todoApp")}>
