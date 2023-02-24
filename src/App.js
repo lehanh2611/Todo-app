@@ -5,11 +5,19 @@ import { LIGHT_COLOR, DARK_COLOR } from "./constants";
 import TodoApp from "./Component/TodoApp";
 
 function App() {
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState(() => {
+    const data = localStorage.getItem("theme");
+    if (data) {
+      return data;
+    } else {
+      return "light";
+    }
+  });
 
   useEffect(() => {
     document.querySelector("html").style =
       theme === "light" ? LIGHT_COLOR : DARK_COLOR.join("; ");
+    localStorage.setItem("theme", theme);
   }, [theme]);
 
   const toogleTheme = () => {
