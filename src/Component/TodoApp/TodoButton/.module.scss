@@ -1,11 +1,23 @@
 .todoButton {
   display: flex;
   justify-content: space-between;
-  margin-top: 60px;
+  align-items: center;
+  margin-top: auto;
+  background-color: var(--bg);
+  margin-bottom: 30px;
+  padding: 0 10px;
 
   .button {
     height: 40px;
     background-color: var(--red);
     width: 45%;
+  }
+  @media (max-width: 600px) {
+    .button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+    }
   }
 }

@@ -1,10 +1,11 @@
 :root {
+  --bg: #ffffff;
   --primary: hsl(188deg 66% 43%);
   --text: hsl(230deg 8% 15%);
   --default: #ffffff;
   --border: hsl(0deg 0% 87%);
   --green: hsl(135deg 42% 43%);
-  --red: hsl(356deg 66% 53%);
+  --red: hsl(356deg 80% 59%);
   --orange: hsl(45deg 94% 56%);
 }
 
@@ -18,6 +19,7 @@ html {
   box-sizing: border-box;
   color: inherit;
   font-size: inherit;
+  transition: background-color linear 0.2s;
 }
 
 body {
@@ -28,6 +30,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: var(--text);
 }
 
 code {

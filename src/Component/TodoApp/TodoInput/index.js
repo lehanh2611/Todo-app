@@ -11,11 +11,11 @@ const cx = classNames.bind(styles);
 function TodoInput({ setTodoList }) {
   const [value, setValue] = useState("");
   const buttonRef = useRef();
+  const inputRef = useRef();
 
   const enterEvent = function (e) {
     if (e.keyCode === 13) {
       buttonRef.current.click();
-      console.log("Enter");
     }
   };
 
@@ -31,17 +31,19 @@ function TodoInput({ setTodoList }) {
         return [{ name: value, state: "todo" }, ...preTodoList];
       }
     });
+    inputRef.current.focus();
   };
 
   return (
     <div className={cx("todoInput")}>
-      <h3 className={cx("title")}>TodoInput</h3>
+      <h3 className={cx("title")}>Todo Input</h3>
       <div className={cx("container")}>
         <div className={cx("inputBox")}>
           <div className={cx("iconBox")}>
             <BookIcon className={cx("icon")} />
           </div>
           <Input
+            ref={inputRef}
             value={value}
             className={cx("input")}
             placeholder="New Todo"

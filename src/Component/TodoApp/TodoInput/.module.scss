@@ -3,10 +3,12 @@
 }
 
 .title {
+  width: fit-content;
   font-size: 3rem;
-  text-align: center;
-  margin: 20px 0;
+  margin: 20px auto;
   font-weight: 600;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
 }
 .container {
   padding: 20px;

@@ -7,25 +7,20 @@ import XIcon from "../svg/XIcon";
 
 const cx = classNames.bind(styles);
 
-function TodoSearch({ setSearch }) {
-  const [value, setVale] = useState("");
-
+function TodoSearch({ setSearch, search }) {
   const clearValue = () => {
-    setVale("");
     setSearch("");
   };
   return (
     <div className={cx("todoSearch")}>
       <Input
-        value={value}
         className={cx("searchInput")}
         onChange={(e) => {
-          setVale(e.target.value);
           setSearch(e.target.value);
         }}
         placeholder="Search Todo"
       />
-      {value ? (
+      {search ? (
         <XIcon className={cx("xIcon")} onClick={clearValue} />
       ) : (
         <SearchIcon className={cx("searchIcon")} />

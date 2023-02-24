@@ -34,13 +34,13 @@ function TodoList({ search, rule, todoList, setTodoList }) {
 
   return (
     <div className={cx("todoList")}>
-      <h3 className={cx("title")}>TodoList</h3>
+      <h3 className={cx("title")}>Todo List</h3>
       <ul className={cx("container")}>
         {todoList.length > 0 &&
           todoList.map((todo) => {
             const todoName = todo.name;
             if (
-              (todo.state !== rule && rule != "all") ||
+              (todo.state !== rule && rule !== "all") ||
               (search !== "" && !todoName.includes(search))
             ) {
               return;

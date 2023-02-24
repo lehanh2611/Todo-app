@@ -5,5 +5,18 @@
   outline: 0;
   border-radius: 5px;
   border: 1px solid var(--border);
+  background-color: transparent;
   cursor: pointer;
+
+  option {
+    background-color: var(--bg);
+  }
+
+  :hover option {
+    background-color: var(--primary);
+  }
+
+  option:hover {
+    background-color: var(--primary);
+  }
 }
