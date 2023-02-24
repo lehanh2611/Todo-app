@@ -1,8 +1,8 @@
 import "./App.css";
 import { useEffect, useState } from "react";
 import { ThemeContext } from "./helper/ThemeContext.js";
-import TodoApp from "./Component/TodoApp";
 import { LIGHT_COLOR, DARK_COLOR } from "./constants";
+import TodoApp from "./Component/TodoApp";
 
 function App() {
   const [theme, setTheme] = useState("light");
